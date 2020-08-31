@@ -1,0 +1,60 @@
+const FRIENDS = [
+  {
+    id: 1,
+    name: 'Jill',
+    occasion: 'Birthday',
+    date: new Date(2020, 8, 1),
+    loves: ['Cheese', 'Wine', 'Blue'],
+    flipped: false,
+  },
+  {
+    id: 2,
+    name: 'Steve',
+    occasion: 'Birthday',
+    date: new Date(2020, 9, 2),
+    loves: ['France', 'Wine', 'Green'],
+    flipped: true,
+  },
+  {
+    id: 3,
+    name: 'Frank',
+    occasion: 'New Job',
+    date: new Date(2020, 9, 3),
+    loves: ['Tech', 'Bread', 'Horses'],
+    flipped: true,
+  },
+  {
+    id: 4,
+    name: 'Ruby',
+    occasion: 'Birthday',
+    date: new Date(2019, 9, 14),
+    loves: ['Sauce', 'Saturdays'],
+    flipped: false,
+  },
+  {
+    id: 5,
+    name: 'Bel',
+    occasion: 'Anniversary',
+    date: new Date(2020, 11, 3),
+    loves: ['Guitar', 'Music', 'Magnets'],
+    flipped: false,
+  },
+  {
+    id: 6,
+    name: 'Samson',
+    occasion: 'Graduation',
+    date: new Date(2020, 5, 18),
+    loves: ['Live Shows', 'Basketball', 'Black'],
+    flipped: false,
+  },
+  {
+    id: 7,
+    name: 'Charlie',
+    occasion: 'Birthday',
+    date: new Date(2020, 12, 25),
+    loves: ['Beer', 'Seven'],
+    flipped: false,
+  },
+];
+
+export default FRIENDS;
