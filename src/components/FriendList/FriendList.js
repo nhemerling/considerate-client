@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export default class FriendsPage extends Component {
+export default class FriendList extends Component {
   render() {
     return <div></div>;
   }

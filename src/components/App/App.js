@@ -4,8 +4,9 @@ import Header from '../Header/Header';
 import HomePage from '../../routes/HomePage/HomePage';
 import FriendsPage from '../../routes/FriendsPage/FriendsPage';
 import AddFriendPage from '../../routes/AddFriendPage/AddFriendPage';
+import './App.css';
 
-class App extends Component {
+export default class App extends Component {
   render() {
     return (
       <div className="App">
@@ -23,5 +24,3 @@ class App extends Component {
     );
   }
 }
-
-export default App;
