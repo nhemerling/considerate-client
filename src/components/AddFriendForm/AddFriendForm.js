@@ -17,12 +17,11 @@ export default class AddFriendForm extends Component {
   };
 
   handleLikesStageSuccess = (likes) => {
-    this.setState({});
+    this.props.onAddFriendSuccess();
   };
 
   render() {
     const { friend } = this.state;
-    console.log(friend);
     return (
       <section className="AddFriendForm">
         <FriendStage onFriendStageSuccess={this.handleFriendStageSuccess} />
