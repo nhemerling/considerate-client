@@ -1,4 +1,4 @@
-import { React, Component } from 'react';
+import React, { Component } from 'react';
 import FriendApiService from '../../services/friend-api-service';
 
 export default class AddFriendForm extends Component {
@@ -11,13 +11,15 @@ export default class AddFriendForm extends Component {
   handleSubmit = (ev) => {
     ev.preventDefault();
     const { friend_name, occasion, occasion_date } = ev.target;
-
-    this.setState({ error: null });
-    FriendApiService.postFriend({
+    const newFriend = {
       friend_name: friend_name.value,
       occasion: occasion.value,
       occasion_date: occasion_date.value,
-    })
+    };
+
+    this.setState({ error: null });
+
+    FriendApiService.postFriend(newFriend)
       .then((friend) => {
         friend_name.value = '';
         occasion.value = '';
