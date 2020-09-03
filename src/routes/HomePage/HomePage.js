@@ -15,7 +15,14 @@ export default class HomePage extends Component {
 
   renderFriends() {
     const { friendList = [] } = this.context;
-    return friendList.map((friend) => (
+    const d = new Date();
+    const filteredFriendList = friendList.filter(
+      // filters so that events in the past don't show
+      (friend) => new Date(friend.occasion_date) > d
+      // TODO: Having trouble finding the math for next month.....
+      // friend.occasion_date < Math.floor(d.setDate(d.getDate() - 7) / 1000)
+    );
+    return filteredFriendList.map((friend) => (
       <FriendCard key={friend.id} friend={friend} />
     ));
   }
