@@ -1,4 +1,4 @@
 export default {
-  API_ENDPOINT: 'http://localhost:8000/api',
+  API_ENDPOINT: 'https://immense-bayou-75450.herokuapp.com/api',
   TOKEN_KEY: process.env.TOKEN_KEY,
 };
