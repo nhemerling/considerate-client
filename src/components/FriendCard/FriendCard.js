@@ -1,14 +1,42 @@
 import React, { Component } from 'react';
+import FriendApiService from '../../services/friend-api-service';
 
 export default class FriendCard extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      friendLikes: [],
+    };
+  }
+
+  componentDidMount() {
+    FriendApiService.getFriendLikes(this.props.friend.id).then((likes) => {
+      this.setState({
+        friendLikes: likes,
+      });
+    });
+  }
+
   render() {
     const { friend } = this.props;
-
+    const { friendLikes = [] } = this.state;
     return (
       <section className="FriendCard">
         <h2 className="FriendCard__name">{friend.friend_name}</h2>
         <h3 className="FriendCard__occasion">{friend.occasion}</h3>
-        <p className="FriendCard__occasion-date">{friend.occasion_date}</p>
+        <p className="FriendCard__occasion-date">
+          {' '}
+          {new Intl.DateTimeFormat('en-US', {
+            year: 'numeric',
+            month: 'long',
+            day: '2-digit',
+          }).format(new Date(friend.occasion_date))}
+        </p>
+        <ul>
+          {friendLikes.map((like) => {
+            return <li key={like.id}>{like.like_name}</li>;
+          })}
+        </ul>
       </section>
     );
   }
