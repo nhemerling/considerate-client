@@ -30,7 +30,7 @@ export default class LikesStage extends Component {
         like1_name.value = '';
         like2_name.value = '';
         like3_name.value = '';
-        this.props.onLikesStageSuccess();
+        this.props.onLikesStageSuccess(likes);
       })
       .catch((res) => {
         this.setState({ error: res.error });

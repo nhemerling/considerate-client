@@ -46,9 +46,7 @@ const FriendApiService = {
         'content-type': 'application/json',
         authorization: `bearer ${TokenService.getAuthToken()}`,
       },
-      body: JSON.stringify({
-        likes,
-      }),
+      body: JSON.stringify(likes),
     }).then((res) =>
       !res.ok ? res.json().then((e) => Promise.reject(e)) : res.json()
     );

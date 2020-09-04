@@ -5,6 +5,13 @@ import ConsiderateContext from '../../context/ConsiderateContext';
 import './FriendsPage.css';
 
 export default class FriendsPage extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      search: '',
+      error: null,
+    };
+  }
   static contextType = ConsiderateContext;
 
   componentDidMount() {
@@ -13,16 +20,38 @@ export default class FriendsPage extends Component {
       .catch(this.context.setError);
   }
 
+  updateSearch(event) {
+    this.setState({
+      search: event.target.value,
+    });
+  }
+
   renderFilteredFriends() {
     const { friendList = [] } = this.context;
-    return friendList.map((friend) => (
+    let filteredFriends = friendList.filter((friend) => {
+      return (
+        friend.friend_name
+          .toLowerCase()
+          .indexOf(this.state.search.toLowerCase()) !== -1
+      );
+    });
+    return filteredFriends.map((friend) => (
       <FriendCard key={friend.id} friend={friend} />
     ));
   }
 
   render() {
     return (
-      <section className="HomePage">{this.renderFilteredFriends()}</section>
+      <section className="HomePage">
+        <label htmlFor="search">Filter By Name:</label>
+        <input
+          type="text"
+          name="search"
+          value={this.state.search}
+          onChange={(e) => this.updateSearch(e)}
+        ></input>
+        {this.renderFilteredFriends()}
+      </section>
     );
   }
 }
