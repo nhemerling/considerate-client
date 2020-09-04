@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import FriendApiService from '../../services/friend-api-service';
+import moment from 'moment';
 
 export default class FriendCard extends Component {
   constructor(props) {
@@ -25,12 +26,7 @@ export default class FriendCard extends Component {
         <h2 className="FriendCard__name">{friend.friend_name}</h2>
         <h3 className="FriendCard__occasion">{friend.occasion}</h3>
         <p className="FriendCard__occasion-date">
-          {' '}
-          {new Intl.DateTimeFormat('en-US', {
-            year: 'numeric',
-            month: 'long',
-            day: '2-digit',
-          }).format(new Date(friend.occasion_date))}
+          {moment(friend.occasion_date).format('MMMM Do YYYY')}
         </p>
         <ul>
           {friendLikes.map((like) => {
