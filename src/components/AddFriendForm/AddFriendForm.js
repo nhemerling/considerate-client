@@ -1,14 +1,10 @@
 import React, { Component } from 'react';
-// import FriendStage from './FriendStage';
-// import LikesStage from './LikesStage';
 import FriendApiService from '../../services/friend-api-service';
 
 export default class AddFriendForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      // friend: {},
-      // likes: [],
       friend_name: '',
       occasion: '',
       occasion_date: '',
@@ -18,19 +14,6 @@ export default class AddFriendForm extends Component {
       error: null,
     };
   }
-
-  // handleFriendStageSuccess = (friend) => {
-  //   this.setState({
-  //     friend,
-  //   });
-  // };
-
-  // handleLikesStageSuccess = (likes) => {
-  //   this.setState({
-  //     likes,
-  //   });
-  //   //this.props.onAddFriendSuccess();
-  // };
 
   handleChange = (target) => {
     const { name, value } = target;
@@ -69,14 +52,9 @@ export default class AddFriendForm extends Component {
   };
 
   render() {
-    const { friend, error } = this.state;
+    const { error } = this.state;
     return (
       <section className="AddFriendForm">
-        {/* <FriendStage onFriendStageSuccess={this.handleFriendStageSuccess} />
-        <LikesStage
-          friend={friend}
-          onLikesStageSuccess={this.handleLikesStageSuccess}
-        /> */}
         <form
           className="AddFriendForm__friend-stage"
           onSubmit={this.handleSubmit}

@@ -14,10 +14,23 @@ export default class HomePage extends Component {
       .catch(this.context.setError);
   }
 
+  compare(a, b) {
+    const dateA = a.occasion_date;
+    const dateB = b.occasion_date;
+
+    let comparison = 0;
+    if (dateA > dateB) {
+      comparison = 1;
+    } else if (dateA < dateB) {
+      comparison = -1;
+    }
+    return comparison;
+  }
+
   renderFilteredFriends() {
     const { friendList = [] } = this.context;
-
-    const filteredFriendList = friendList.filter(
+    const sortedFriends = friendList.sort(this.compare);
+    const filteredFriendList = sortedFriends.filter(
       // NEEDS FIX: filters friends to hide past occasions, and only show occasions in the next month
       (friend) =>
         moment(friend.occasion_date).month() < moment().month() + 1 &&

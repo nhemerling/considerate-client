@@ -26,9 +26,23 @@ export default class FriendsPage extends Component {
     });
   }
 
+  compare(a, b) {
+    const dateA = a.occasion_date;
+    const dateB = b.occasion_date;
+
+    let comparison = 0;
+    if (dateA > dateB) {
+      comparison = 1;
+    } else if (dateA < dateB) {
+      comparison = -1;
+    }
+    return comparison;
+  }
+
   renderFilteredFriends() {
     const { friendList = [] } = this.context;
-    let filteredFriends = friendList.filter((friend) => {
+    const sortedFriends = friendList.sort(this.compare);
+    const filteredFriends = sortedFriends.filter((friend) => {
       return (
         friend.friend_name
           .toLowerCase()
@@ -43,7 +57,7 @@ export default class FriendsPage extends Component {
   render() {
     return (
       <section className="HomePage">
-        <label htmlFor="search">Filter By Name:</label>
+        <label htmlFor="search">Search: </label>
         <input
           type="text"
           name="search"
