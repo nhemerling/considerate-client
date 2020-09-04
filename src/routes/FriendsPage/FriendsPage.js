@@ -57,7 +57,7 @@ export default class FriendsPage extends Component {
   render() {
     return (
       <section className="HomePage">
-        <label htmlFor="search">Search: </label>
+        <label htmlFor="search">Search Friends: </label>
         <input
           type="text"
           name="search"
