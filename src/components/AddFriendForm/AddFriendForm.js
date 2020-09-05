@@ -8,10 +8,8 @@ export default class AddFriendForm extends Component {
       friend_name: '',
       occasion: '',
       occasion_date: '',
-      like1: '',
-      like2: '',
-      like3: '',
       error: null,
+      likes: [{ like_name: '', id: 1 }],
     };
   }
 
@@ -22,34 +20,73 @@ export default class AddFriendForm extends Component {
     });
   };
 
+  handleLikeChange = (target) => {
+    console.log(target.name);
+    const likes = [...this.state.likes];
+    const currentIndex = likes.findIndex(
+      (like) => like.id === Number(target.name)
+    );
+    console.log(currentIndex);
+    const likeChanged = { id: likes[currentIndex].id, like_name: target.value };
+    likes[currentIndex] = likeChanged;
+    console.log(likeChanged);
+    //DOES NOT WORK NEED FIX !!!!!!!!
+    this.setState({
+      likes,
+    });
+  };
+
+  handleAddLikeField() {
+    const likes = this.state.likes;
+    const lastLike = likes[likes.length - 1];
+    const nextLike = { id: lastLike.id + 1 };
+    this.setState({
+      likes: [...likes, nextLike],
+    });
+  }
+
+  handleReset() {
+    this.setState({
+      friend_name: '',
+      occasion: '',
+      occasion_date: '',
+      error: null,
+      likes: [{ like_name: '', id: 1 }],
+    });
+  }
+
   handleSubmit = (event) => {
     event.preventDefault();
-    const {
-      friend_name,
-      occasion,
-      occasion_date,
-      like1,
-      like2,
-      like3,
-    } = this.state;
+    const { friend_name, occasion, occasion_date, likes } = this.state;
     const newFriend = {
       friend_name: friend_name,
       occasion: occasion,
       occasion_date: occasion_date,
-    };
-    const newLikes = {
-      likes: [{ like_name: like1 }, { like_name: like2 }, { like_name: like3 }],
     };
 
     this.setState({ error: null });
 
     FriendApiService.postFriend(newFriend)
       .then((friend) => {
-        return FriendApiService.postLikes(newLikes, friend.id);
+        return FriendApiService.postLikes({ likes }, friend.id);
       })
       .then(this.props.onAddFriendSuccess())
       .catch((res) => this.setState({ error: res.error }));
   };
+
+  renderLikeField(index) {
+    return (
+      <div className={`friend_like${index}`} key={index}>
+        <label htmlFor={`AddFriendForm__like${index}`}>Like {index}</label>
+        <input
+          name={index}
+          type="text"
+          id={`AddFriendForm__like${index}`}
+          onChange={(e) => this.handleLikeChange(e.target)}
+        ></input>
+      </div>
+    );
+  }
 
   render() {
     const { error } = this.state;
@@ -91,35 +128,16 @@ export default class AddFriendForm extends Component {
             ></input>
           </div>
           <div className="friend_likes">
-            <div className="friend_like1">
-              <label htmlFor="AddFriendForm__like1">Like 1</label>
-              <input
-                name="like1"
-                type="text"
-                id="AddFriendForm__like1"
-                onChange={(e) => this.handleChange(e.target)}
-              ></input>
-            </div>
-            <div className="friend_like2">
-              <label htmlFor="AddFriendForm__like1">Like 2</label>
-              <input
-                name="like2"
-                type="text"
-                id="AddFriendForm__like2"
-                onChange={(e) => this.handleChange(e.target)}
-              ></input>
-            </div>
-            <div className="friend_like3">
-              <label htmlFor="AddFriendForm__like1">Like 3</label>
-              <input
-                name="like3"
-                type="text"
-                id="AddFriendForm__like3"
-                onChange={(e) => this.handleChange(e.target)}
-              ></input>
-            </div>
+            {this.state.likes.map((like) => {
+              return this.renderLikeField(like.id);
+            })}
+            <button type="button" onClick={() => this.handleAddLikeField()}>
+              + Add Like
+            </button>
           </div>
-          <button type="reset">Reset</button>
+          <button type="reset" onClick={() => this.handleReset()}>
+            Reset
+          </button>
           <button type="submit">Add</button>
         </form>
       </section>
