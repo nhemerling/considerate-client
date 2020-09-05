@@ -22,14 +22,17 @@ export default class AddFriendForm extends Component {
 
   handleLikeChange = (target) => {
     console.log(target.name);
-    const likes = this.state.likes;
-    const likeToChange = likes.find((like) => like.id === Number(target.name));
-    console.log(likeToChange);
-    const likeChanged = { id: likeToChange.id, like_name: target.value };
+    const likes = [...this.state.likes];
+    const currentIndex = likes.findIndex(
+      (like) => like.id === Number(target.name)
+    );
+    console.log(currentIndex);
+    const likeChanged = { id: likes[currentIndex].id, like_name: target.value };
+    likes[currentIndex] = likeChanged;
     console.log(likeChanged);
     //DOES NOT WORK NEED FIX !!!!!!!!
     this.setState({
-      likes: [likeChanged],
+      likes,
     });
   };
 
@@ -54,28 +57,18 @@ export default class AddFriendForm extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-    const {
-      friend_name,
-      occasion,
-      occasion_date,
-      like1,
-      like2,
-      like3,
-    } = this.state;
+    const { friend_name, occasion, occasion_date, likes } = this.state;
     const newFriend = {
       friend_name: friend_name,
       occasion: occasion,
       occasion_date: occasion_date,
-    };
-    const newLikes = {
-      likes: [{ like_name: like1 }, { like_name: like2 }, { like_name: like3 }],
     };
 
     this.setState({ error: null });
 
     FriendApiService.postFriend(newFriend)
       .then((friend) => {
-        return FriendApiService.postLikes(newLikes, friend.id);
+        return FriendApiService.postLikes({ likes }, friend.id);
       })
       .then(this.props.onAddFriendSuccess())
       .catch((res) => this.setState({ error: res.error }));
