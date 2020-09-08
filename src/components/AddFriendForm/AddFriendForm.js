@@ -62,14 +62,12 @@ export default class AddFriendForm extends Component {
       friend_name: friend_name,
       occasion: occasion,
       occasion_date: occasion_date,
+      likes: likes,
     };
 
     this.setState({ error: null });
 
     FriendApiService.postFriend(newFriend)
-      .then((friend) => {
-        return FriendApiService.postLikes({ likes }, friend.id);
-      })
       .then(this.props.onAddFriendSuccess())
       .catch((res) => this.setState({ error: res.error }));
   };
