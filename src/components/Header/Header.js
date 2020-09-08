@@ -11,9 +11,15 @@ export default class Header extends Component {
   renderLogoutLink() {
     return (
       <div className="Header__logged-in">
-        <NavLink to="/home">Home</NavLink>
-        <NavLink to="/friends">Friends</NavLink>
-        <NavLink to="/add-friend">+Friend</NavLink>
+        <NavLink activeClassName="selected" to="/home">
+          Home
+        </NavLink>
+        <NavLink activeClassName="selected" to="/friends">
+          Friends
+        </NavLink>
+        <NavLink activeClassName="selected" to="/add-friend">
+          +Friend
+        </NavLink>
         <Link onClick={this.handleLogoutClick} to="/">
           Logout
         </Link>
@@ -24,8 +30,12 @@ export default class Header extends Component {
   renderLoginLink() {
     return (
       <div className="Header__not-logged-in">
-        <NavLink to="/login">Log in</NavLink>
-        <NavLink to="/register">Register</NavLink>
+        <NavLink activeClassName="selected" to="/login">
+          Log in
+        </NavLink>
+        <NavLink activeClassName="selected" to="/register">
+          Register
+        </NavLink>
       </div>
     );
   }

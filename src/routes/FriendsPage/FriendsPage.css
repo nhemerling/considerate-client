@@ -3,3 +3,13 @@
   justify-content: space-evenly;
   flex-wrap: wrap;
 }
+
+.FriendsPage input {
+  width: 100%;
+}
+
+@media screen and (min-width: 450px) {
+  .FriendsPage input {
+    width: 50%;
+  }
+}
