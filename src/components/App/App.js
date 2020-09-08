@@ -9,6 +9,7 @@ import AddFriendPage from '../../routes/AddFriendPage/AddFriendPage';
 import LoginPage from '../../routes/LoginPage/LoginPage';
 import RegistrationPage from '../../routes/RegistrationPage/RegistrationPage';
 import NotFoundPage from '../../routes/NotFoundPage/NotFoundPage';
+import LandingPage from '../../routes/LandingPage/LandingPage';
 import './App.css';
 
 export default class App extends Component {
@@ -28,11 +29,12 @@ export default class App extends Component {
         <main className="App__main">
           {this.state.hasError && <p className="red">There was an error.</p>}
           <Switch>
-            <PrivateRoute exact path={'/'} component={HomePage} />
+            <PrivateRoute exact path={'/home'} component={HomePage} />
             <PrivateRoute path={'/friends'} component={FriendsPage} />
             <PrivateRoute path={'/add-friend'} component={AddFriendPage} />
             <PublicOnlyRoute path={'/login'} component={LoginPage} />
             <PublicOnlyRoute path={'/register'} component={RegistrationPage} />
+            <Route path={'/'} component={LandingPage} />
             <Route component={NotFoundPage} />
           </Switch>
         </main>

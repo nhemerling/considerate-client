@@ -11,7 +11,7 @@ export default class Header extends Component {
   renderLogoutLink() {
     return (
       <div className="Header__logged-in">
-        <NavLink to="/">Home</NavLink>
+        <NavLink to="/home">Home</NavLink>
         <NavLink to="/friends">Friends</NavLink>
         <NavLink to="/add-friend">Add Friend</NavLink>
         <Link onClick={this.handleLogoutClick} to="/">

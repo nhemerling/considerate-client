@@ -10,7 +10,7 @@ export default class AddFriendPage extends Component {
 
   handleAddFriendSuccess = (friend) => {
     const { history } = this.props;
-    history.push('/');
+    history.push('/home');
   };
 
   render() {
