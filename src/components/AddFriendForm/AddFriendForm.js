@@ -80,6 +80,7 @@ export default class AddFriendForm extends Component {
           name={index}
           type="text"
           id={`AddFriendForm__like${index}`}
+          required
           onChange={(e) => this.handleLikeChange(e.target)}
         ></input>
       </div>
