@@ -92,10 +92,7 @@ export default class AddFriendForm extends Component {
     const { error } = this.state;
     return (
       <section className="AddFriendForm">
-        <form
-          className="AddFriendForm__friend-stage"
-          onSubmit={this.handleSubmit}
-        >
+        <form className="AddFriendForm" onSubmit={this.handleSubmit}>
           <div role="alert">{error && <p className="red">{error}</p>}</div>
           <div className="friend_name">
             <label htmlFor="AddFriendForm__friend_name">Friend name</label>
@@ -138,7 +135,7 @@ export default class AddFriendForm extends Component {
           <button type="reset" onClick={() => this.handleReset()}>
             Reset
           </button>
-          <button type="submit">Add</button>
+          <button type="submit">Submit</button>
         </form>
       </section>
     );

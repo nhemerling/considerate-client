@@ -1,0 +1,48 @@
+.Header {
+  height: 30px;
+  display: flex;
+  align-items: normal;
+  justify-content: space-between;
+}
+
+.Header h1 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.Header a {
+  color: #444;
+  text-decoration: none;
+  padding: 0 5px;
+  transition: 0.3s;
+}
+
+.Header a:hover {
+  color: #dedcf5;
+}
+
+.Header__not-logged-in {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.Header__logged-in {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 14px;
+}
+
+.Header a.selected {
+  text-decoration: underline;
+  color: #dedcf5;
+}
+
+@media screen and (min-width: 450px) {
+  .Header h1 {
+    font-size: 30px;
+  }
+}

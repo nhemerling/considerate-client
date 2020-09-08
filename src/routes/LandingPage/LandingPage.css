@@ -1,0 +1,10 @@
+.LandingPage__section h1 {
+  font-size: 40px;
+  text-align: center;
+}
+
+@media screen and (min-width: 450px) {
+  .LandingPage__section h1 {
+    font-size: 50px;
+  }
+}

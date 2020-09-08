@@ -56,15 +56,19 @@ export default class FriendsPage extends Component {
 
   render() {
     return (
-      <section className="HomePage">
-        <label htmlFor="search">Search Friends: </label>
+      <section className="FriendsPage">
+        <label htmlFor="search">
+          <p>Search Friends: </p>
+        </label>
         <input
           type="text"
           name="search"
           value={this.state.search}
           onChange={(e) => this.updateSearch(e)}
         ></input>
-        {this.renderFilteredFriends()}
+        <div className="FriendsPage__friends">
+          {this.renderFilteredFriends()}
+        </div>
       </section>
     );
   }
