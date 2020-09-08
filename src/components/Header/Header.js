@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import TokenService from '../../services/token-service';
 import './Header.css';
 
@@ -11,9 +11,9 @@ export default class Header extends Component {
   renderLogoutLink() {
     return (
       <div className="Header__logged-in">
-        <Link to="/">Home</Link>
-        <Link to="/friends">Friends</Link>
-        <Link to="/add-friend">Add Friend</Link>
+        <NavLink to="/">Home</NavLink>
+        <NavLink to="/friends">Friends</NavLink>
+        <NavLink to="/add-friend">Add Friend</NavLink>
         <Link onClick={this.handleLogoutClick} to="/">
           Logout
         </Link>
@@ -24,8 +24,8 @@ export default class Header extends Component {
   renderLoginLink() {
     return (
       <div className="Header__not-logged-in">
-        <Link to="/login">Log in</Link>
-        <Link to="/register">Register</Link>
+        <NavLink to="/login">Log in</NavLink>
+        <NavLink to="/register">Register</NavLink>
       </div>
     );
   }
