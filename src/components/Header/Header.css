@@ -8,6 +8,7 @@
 .Header h1 {
   margin: 0;
   text-decoration: none;
+  font-size: 20px;
 }
 
 .Header a {
@@ -33,6 +34,6 @@
 
 @media screen and (min-width: 450px) {
   .Header h1 {
-    font-size: 36px;
+    font-size: 30px;
   }
 }

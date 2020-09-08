@@ -13,7 +13,7 @@ export default class Header extends Component {
       <div className="Header__logged-in">
         <NavLink to="/home">Home</NavLink>
         <NavLink to="/friends">Friends</NavLink>
-        <NavLink to="/add-friend">Add Friend</NavLink>
+        <NavLink to="/add-friend">+Friend</NavLink>
         <Link onClick={this.handleLogoutClick} to="/">
           Logout
         </Link>
