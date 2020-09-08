@@ -12,6 +12,13 @@ import NotFoundPage from '../../routes/NotFoundPage/NotFoundPage';
 import './App.css';
 
 export default class App extends Component {
+  state = { hasError: false };
+
+  static getDerivedStateFromError(error) {
+    console.error(error);
+    return { hasError: true };
+  }
+
   render() {
     return (
       <div className="App">
@@ -19,6 +26,7 @@ export default class App extends Component {
           <Header />
         </header>
         <main className="App__main">
+          {this.state.hasError && <p className="red">There was an error.</p>}
           <Switch>
             <PrivateRoute exact path={'/'} component={HomePage} />
             <PrivateRoute path={'/friends'} component={FriendsPage} />

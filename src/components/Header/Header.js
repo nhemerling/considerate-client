@@ -31,12 +31,13 @@ export default class Header extends Component {
   }
 
   render() {
+    console.log('Header.js');
     return (
       <nav className="Header">
         <h1>
           <Link to="/">Considerate</Link>
         </h1>
-        <span className="Header__tagline">The perfect gift every time.</span>
+        {/* <span className="Header__tagline">The perfect gift every time.</span> */}
         {TokenService.hasAuthToken()
           ? this.renderLogoutLink()
           : this.renderLoginLink()}

@@ -1,0 +1,30 @@
+.Header {
+  height: 30px;
+  display: flex;
+  align-items: normal;
+  justify-content: space-between;
+}
+
+.Header h1 {
+  margin: 0;
+  text-decoration: none;
+}
+
+.Header a {
+  color: #444;
+  text-decoration: none;
+  padding: 0 5px;
+}
+
+.Header__not-logged-in {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+@media screen and (min-width: 450px) {
+  .Header h1 {
+    font-size: 46px;
+  }
+}
