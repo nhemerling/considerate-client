@@ -25,10 +25,10 @@ export default class FriendCard extends Component {
     return (
       <section className="FriendCard">
         <h2 className="FriendCard__name">{friend.friend_name}</h2>
-        <h3 className="FriendCard__occasion">{friend.occasion}</h3>
-        <p className="FriendCard__occasion-date">
+        <h3 className="FriendCard__occasion-date">
           {moment(friend.occasion_date).format('MMMM Do YYYY')}
-        </p>
+        </h3>
+        <h4 className="FriendCard__occasion">{friend.occasion}</h4>
         <ul className="FriendCard__likes">
           {friendLikes.map((like) => {
             return (

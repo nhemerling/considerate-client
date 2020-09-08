@@ -18,7 +18,7 @@
 }
 
 .Header a:hover {
-  color: #dedcf5;
+  color: #ada7f0;
 }
 
 .Header__not-logged-in {
@@ -38,7 +38,7 @@
 
 .Header a.selected {
   text-decoration: underline;
-  color: #dedcf5;
+  color: #ada7f0;
 }
 
 @media screen and (min-width: 450px) {

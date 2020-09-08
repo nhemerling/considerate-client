@@ -24,13 +24,14 @@ h1 {
 h2 {
   font-family: cooper-black-std, serif;
   font-size: 20px;
-}
-
-h3 {
-  font-family: 'Segoe UI';
   color: #222;
 }
 
+h3 {
+  color: #222;
+}
+
+h4,
 p {
   color: #555;
 }
