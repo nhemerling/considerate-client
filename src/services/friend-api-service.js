@@ -22,7 +22,7 @@ const FriendApiService = {
     );
   },
 
-  postFriend(newFriend) {
+  postFriend(newFriend, likes) {
     return fetch(`${config.API_ENDPOINT}/friends`, {
       method: 'POST',
       headers: {
@@ -33,6 +33,7 @@ const FriendApiService = {
         friend_name: newFriend.friend_name,
         occasion: newFriend.occasion,
         occasion_date: newFriend.occasion_date,
+        likes: newFriend.likes,
       }),
     }).then((res) =>
       !res.ok ? res.json().then((e) => Promise.reject(e)) : res.json()
