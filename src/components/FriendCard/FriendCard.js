@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import FriendApiService from '../../services/friend-api-service';
 import moment from 'moment';
 import ConsiderateContext from '../../context/ConsiderateContext';
@@ -55,9 +56,9 @@ export default class FriendCard extends Component {
           <button type="button" onClick={() => this.deleteFriend(friend.id)}>
             Delete
           </button>
-          <button type="button" onClick={() => this.editFriend(friend.id)}>
-            Edit
-          </button>
+          <Link to={`/edit-friend/${friend.id}`}>
+            <button type="button">Edit</button>
+          </Link>
         </div>
       </section>
     );

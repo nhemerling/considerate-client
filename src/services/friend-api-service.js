@@ -22,6 +22,17 @@ const FriendApiService = {
     );
   },
 
+  getFriendById(friendId) {
+    return fetch(`${config.API_ENDPOINT}/friends/${friendId}`, {
+      method: 'GET',
+      headers: {
+        authorization: `bearer ${TokenService.getAuthToken()}`,
+      },
+    }).then((res) =>
+      !res.ok ? res.json().then((e) => Promise.reject(e)) : res.json()
+    );
+  },
+
   postFriend(newFriend, likes) {
     return fetch(`${config.API_ENDPOINT}/friends`, {
       method: 'POST',
@@ -59,6 +70,19 @@ const FriendApiService = {
       headers: {
         authorization: `bearer ${TokenService.getAuthToken()}`,
       },
+    }).then((res) =>
+      !res.ok ? res.json().then((e) => Promise.reject(e)) : res
+    );
+  },
+
+  updateFriend(friendId, updatedFriend) {
+    return fetch(`${config.API_ENDPOINT}/friends/${friendId}`, {
+      method: 'PATCH',
+      headers: {
+        'content-type': 'application/json',
+        authorization: `bearer ${TokenService.getAuthToken()}`,
+      },
+      body: JSON.stringify(updatedFriend),
     }).then((res) =>
       !res.ok ? res.json().then((e) => Promise.reject(e)) : res
     );

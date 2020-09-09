@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import FriendApiService from '../../services/friend-api-service';
+import './AddFriendForm.css';
 
 export default class AddFriendForm extends Component {
   constructor(props) {
