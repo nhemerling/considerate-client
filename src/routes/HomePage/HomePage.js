@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import FriendCard from '../../components/FriendCard/FriendCard';
 import FriendApiService from '../../services/friend-api-service';
 import ConsiderateContext from '../../context/ConsiderateContext';
-import FriendsList from '../../components/FriendsList/FriendsList';
 import moment from 'moment';
 import './HomePage.css';
 
@@ -32,7 +31,6 @@ export default class HomePage extends Component {
     const { friendList = [] } = this.context;
     const sortedFriends = friendList.sort(this.compare);
     const filteredFriendList = sortedFriends.filter(
-      // NEEDS FIX: filters friends to hide past occasions, and only show occasions in the next month
       (friend) =>
         moment(friend.occasion_date).month() < moment().month() + 1 &&
         moment() < moment(friend.occasion_date)
@@ -44,10 +42,7 @@ export default class HomePage extends Component {
 
   render() {
     return (
-      <section className="HomePage">
-        {this.renderFilteredFriends()}
-        {/* <FriendsList pathname={this.props.location.pathname} /> */}
-      </section>
+      <section className="HomePage">{this.renderFilteredFriends()}</section>
     );
   }
 }

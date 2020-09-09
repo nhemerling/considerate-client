@@ -16,8 +16,6 @@ export class ConsiderateProvider extends Component {
   };
 
   setFriendList = (friendList) => {
-    console.log('state friend list: ', this.state.friendList);
-    console.log('friend list: ', friendList);
     this.setState({ friendList });
   };
 

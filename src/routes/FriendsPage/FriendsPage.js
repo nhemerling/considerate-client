@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import FriendCard from '../../components/FriendCard/FriendCard';
 import FriendApiService from '../../services/friend-api-service';
 import ConsiderateContext from '../../context/ConsiderateContext';
-import FriendsList from '../../components/FriendsList/FriendsList';
 import './FriendsPage.css';
 
 export default class FriendsPage extends Component {
@@ -70,7 +69,6 @@ export default class FriendsPage extends Component {
         <div className="FriendsPage__friends">
           {this.renderFilteredFriends()}
         </div>
-        {/* <FriendsList /> */}
       </section>
     );
   }

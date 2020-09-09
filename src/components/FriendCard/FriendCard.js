@@ -24,11 +24,8 @@ export default class FriendCard extends Component {
 
   deleteFriend(friendId) {
     FriendApiService.deleteFriend(friendId).then((res) => {
-      console.log('deleted');
       FriendApiService.getFriends()
         .then((res) => {
-          //console.log(res);
-          console.log(this.context);
           this.context.setFriendList(res);
         })
         .catch(this.context.setError);
