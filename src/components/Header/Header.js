@@ -41,7 +41,6 @@ export default class Header extends Component {
   }
 
   render() {
-    console.log('Header.js');
     return (
       <nav className="Header">
         <h1>

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import FriendApiService from '../../services/friend-api-service';
+import './AddFriendForm.css';
 
 export default class AddFriendForm extends Component {
   constructor(props) {
@@ -21,16 +22,12 @@ export default class AddFriendForm extends Component {
   };
 
   handleLikeChange = (target) => {
-    console.log(target.name);
     const likes = [...this.state.likes];
     const currentIndex = likes.findIndex(
       (like) => like.id === Number(target.name)
     );
-    console.log(currentIndex);
     const likeChanged = { id: likes[currentIndex].id, like_name: target.value };
     likes[currentIndex] = likeChanged;
-    console.log(likeChanged);
-    //DOES NOT WORK NEED FIX !!!!!!!!
     this.setState({
       likes,
     });

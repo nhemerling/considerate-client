@@ -31,7 +31,6 @@ export default class HomePage extends Component {
     const { friendList = [] } = this.context;
     const sortedFriends = friendList.sort(this.compare);
     const filteredFriendList = sortedFriends.filter(
-      // NEEDS FIX: filters friends to hide past occasions, and only show occasions in the next month
       (friend) =>
         moment(friend.occasion_date).month() < moment().month() + 1 &&
         moment() < moment(friend.occasion_date)

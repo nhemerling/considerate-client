@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import FriendApiService from '../../services/friend-api-service';
 import moment from 'moment';
+import ConsiderateContext from '../../context/ConsiderateContext';
 import './FriendCard.css';
 
 export default class FriendCard extends Component {
@@ -11,11 +13,23 @@ export default class FriendCard extends Component {
     };
   }
 
+  static contextType = ConsiderateContext;
+
   componentDidMount() {
     FriendApiService.getFriendLikes(this.props.friend.id).then((likes) => {
       this.setState({
         friendLikes: likes,
       });
+    });
+  }
+
+  deleteFriend(friendId) {
+    FriendApiService.deleteFriend(friendId).then((res) => {
+      FriendApiService.getFriends()
+        .then((res) => {
+          this.context.setFriendList(res);
+        })
+        .catch(this.context.setError);
     });
   }
 
@@ -38,6 +52,14 @@ export default class FriendCard extends Component {
             );
           })}
         </ul>
+        <div className="FriendCard__buttons">
+          <button type="button" onClick={() => this.deleteFriend(friend.id)}>
+            Delete
+          </button>
+          <Link to={`/edit-friend/${friend.id}`}>
+            <button type="button">Edit</button>
+          </Link>
+        </div>
       </section>
     );
   }
