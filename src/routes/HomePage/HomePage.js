@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import FriendCard from '../../components/FriendCard/FriendCard';
 import FriendApiService from '../../services/friend-api-service';
 import ConsiderateContext from '../../context/ConsiderateContext';
+import FriendsList from '../../components/FriendsList/FriendsList';
 import moment from 'moment';
 import './HomePage.css';
 
@@ -43,7 +44,10 @@ export default class HomePage extends Component {
 
   render() {
     return (
-      <section className="HomePage">{this.renderFilteredFriends()}</section>
+      <section className="HomePage">
+        {this.renderFilteredFriends()}
+        {/* <FriendsList pathname={this.props.location.pathname} /> */}
+      </section>
     );
   }
 }
