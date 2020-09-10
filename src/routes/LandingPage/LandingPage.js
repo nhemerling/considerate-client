@@ -50,7 +50,7 @@ export default class LandingPage extends Component {
           </header>
           <p>
             If you'd like to demo Considerate, log in with the username 'demo'
-            and the password 'D33mm0!'.
+            and the password 'D33mm0!!'.
           </p>
         </section>
       </div>
