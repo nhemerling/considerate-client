@@ -1,13 +1,12 @@
 .Header {
-  height: 30px;
-  display: flex;
-  align-items: normal;
-  justify-content: space-between;
+  margin-bottom: 40px;
 }
 
 .Header h1 {
-  margin: 0;
-  font-size: 20px;
+  text-align: center;
+  padding: 30px -20px;
+  margin: 10px 0px;
+  font-size: 35px;
 }
 
 .Header a {
@@ -25,15 +24,14 @@
   display: flex;
   flex: 1;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
 }
 
 .Header__logged-in {
   display: flex;
   flex: 1;
   align-items: center;
-  justify-content: flex-end;
-  font-size: 14px;
+  justify-content: center;
 }
 
 .Header a.selected {
@@ -42,7 +40,22 @@
 }
 
 @media screen and (min-width: 450px) {
+  .Header {
+    height: 30px;
+    display: flex;
+    align-items: normal;
+    justify-content: space-between;
+  }
+
   .Header h1 {
-    font-size: 30px;
+    margin: 0;
+  }
+
+  .Header__not-logged-in {
+    justify-content: flex-end;
+  }
+
+  .Header__logged-in {
+    justify-content: flex-end;
   }
 }
