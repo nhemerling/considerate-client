@@ -1,0 +1,103 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AddFriendForm component renders an AddFriendForm 1`] = `
+<section
+  className="AddFriendForm"
+>
+  <form
+    className="AddFriendForm"
+    onSubmit={[Function]}
+  >
+    <div
+      role="alert"
+    />
+    <div
+      className="friend_name"
+    >
+      <label
+        htmlFor="AddFriendForm__friend_name"
+      >
+        Friend name
+      </label>
+      <input
+        id="AddFriendForm__friend_name"
+        name="friend_name"
+        onChange={[Function]}
+        required={true}
+        type="text"
+      />
+    </div>
+    <div
+      className="occasion"
+    >
+      <label
+        htmlFor="AddFriendForm__occasion"
+      >
+        Occasion
+      </label>
+      <input
+        id="AddFriendForm__occasion"
+        name="occasion"
+        onChange={[Function]}
+        required={true}
+        type="text"
+      />
+    </div>
+    <div
+      className="occasion_date"
+    >
+      <label
+        htmlFor="AddFriendForm__occasion_date"
+      >
+        Occasion Date
+      </label>
+      <input
+        id="AddFriendForm__occasion_date"
+        name="occasion_date"
+        onChange={[Function]}
+        required={true}
+        type="date"
+      />
+    </div>
+    <div
+      className="friend_likes"
+    >
+      <div
+        className="friend_like1"
+        key="1"
+      >
+        <label
+          htmlFor="AddFriendForm__like1"
+        >
+          Like 
+          1
+        </label>
+        <input
+          id="AddFriendForm__like1"
+          name={1}
+          onChange={[Function]}
+          required={true}
+          type="text"
+        />
+      </div>
+      <button
+        onClick={[Function]}
+        type="button"
+      >
+        + Add Like
+      </button>
+    </div>
+    <button
+      onClick={[Function]}
+      type="reset"
+    >
+      Reset
+    </button>
+    <button
+      type="submit"
+    >
+      Submit
+    </button>
+  </form>
+</section>
+`;

@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FriendCard Component renders a FriendCard with friend props 1`] = `
+<section
+  className="FriendCard"
+>
+  <h2
+    className="FriendCard__name"
+  >
+    Test name
+  </h2>
+  <h3
+    className="FriendCard__occasion-date"
+  >
+    January 21st 2029
+  </h3>
+  <h4
+    className="FriendCard__occasion"
+  >
+    Birthday
+  </h4>
+  <ul
+    className="FriendCard__likes"
+  />
+  <div
+    className="FriendCard__buttons"
+  >
+    <button
+      onClick={[Function]}
+      type="button"
+    >
+      Delete
+    </button>
+    <Link
+      to="/edit-friend/1"
+    >
+      <button
+        type="button"
+      >
+        Edit
+      </button>
+    </Link>
+  </div>
+</section>
+`;

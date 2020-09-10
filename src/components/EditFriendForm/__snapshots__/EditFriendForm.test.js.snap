@@ -1,0 +1,143 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EditFriendForm component renders a specific EditFriendForm when given a friendId 1`] = `
+<section
+  className="EditFriendForm"
+>
+  <form
+    className="EditFriendForm"
+    onSubmit={[Function]}
+  >
+    <div
+      role="alert"
+    />
+    <div
+      className="friend_name"
+    >
+      <label
+        htmlFor="EditFriendForm__friend_name"
+      >
+        Friend name
+      </label>
+      <input
+        id="EditFriendForm__friend_name"
+        name="friend_name"
+        onChange={[Function]}
+        required={true}
+        type="text"
+        value=""
+      />
+    </div>
+    <div
+      className="occasion"
+    >
+      <label
+        htmlFor="EditFriendForm__occasion"
+      >
+        Occasion
+      </label>
+      <input
+        id="EditFriendForm__occasion"
+        name="occasion"
+        onChange={[Function]}
+        required={true}
+        type="text"
+        value=""
+      />
+    </div>
+    <div
+      className="occasion_date"
+    >
+      <label
+        htmlFor="EditFriendForm__occasion_date"
+      >
+        Occasion Date
+      </label>
+      <input
+        id="EditFriendForm__occasion_date"
+        name="occasion_date"
+        onChange={[Function]}
+        required={true}
+        type="date"
+        value="Invalid date"
+      />
+    </div>
+    <button
+      type="submit"
+    >
+      Submit
+    </button>
+  </form>
+</section>
+`;
+
+exports[`EditFriendForm component renders an EditFriendForm by default 1`] = `
+<section
+  className="EditFriendForm"
+>
+  <form
+    className="EditFriendForm"
+    onSubmit={[Function]}
+  >
+    <div
+      role="alert"
+    />
+    <div
+      className="friend_name"
+    >
+      <label
+        htmlFor="EditFriendForm__friend_name"
+      >
+        Friend name
+      </label>
+      <input
+        id="EditFriendForm__friend_name"
+        name="friend_name"
+        onChange={[Function]}
+        required={true}
+        type="text"
+        value=""
+      />
+    </div>
+    <div
+      className="occasion"
+    >
+      <label
+        htmlFor="EditFriendForm__occasion"
+      >
+        Occasion
+      </label>
+      <input
+        id="EditFriendForm__occasion"
+        name="occasion"
+        onChange={[Function]}
+        required={true}
+        type="text"
+        value=""
+      />
+    </div>
+    <div
+      className="occasion_date"
+    >
+      <label
+        htmlFor="EditFriendForm__occasion_date"
+      >
+        Occasion Date
+      </label>
+      <input
+        id="EditFriendForm__occasion_date"
+        name="occasion_date"
+        onChange={[Function]}
+        required={true}
+        type="date"
+        value="Invalid date"
+      />
+    </div>
+    <button
+      type="submit"
+    >
+      Submit
+    </button>
+  </form>
+</section>
+`;
