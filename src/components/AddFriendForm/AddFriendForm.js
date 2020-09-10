@@ -72,11 +72,11 @@ export default class AddFriendForm extends Component {
   renderLikeField(index) {
     return (
       <div className={`friend_like${index}`} key={index}>
-        <label htmlFor={`AddFriendForm__like${index}`}>Like {index}</label>
         <input
           name={index}
           type="text"
           id={`AddFriendForm__like${index}`}
+          aria-label={`Like ${index}`}
           required
           onChange={(e) => this.handleLikeChange(e.target)}
         ></input>
@@ -121,6 +121,7 @@ export default class AddFriendForm extends Component {
             ></input>
           </div>
           <div className="friend_likes">
+            <label htmlFor="AddFriendForm__likes">Likes</label>
             {this.state.likes.map((like) => {
               return this.renderLikeField(like.id);
             })}
