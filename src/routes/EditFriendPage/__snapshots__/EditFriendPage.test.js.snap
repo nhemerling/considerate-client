@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EditFriendPage component renders a EditFriendPage component 1`] = `
+<section
+  className="EditFriendPage"
+>
+  <h2>
+    Edit Friend
+  </h2>
+  <EditFriendForm
+    friendId={0}
+    onEditFriendSuccess={[Function]}
+  />
+</section>
+`;
