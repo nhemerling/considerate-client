@@ -8,7 +8,7 @@ describe('FriendCard Component', () => {
     id: 1,
     friend_name: 'Test name',
     occasion: 'Birthday',
-    occasion_date: '2029-01-22T00:00:00.001Z',
+    occasion_date: '2029-01-22T00:00:00.000Z',
   };
 
   it('renders a FriendCard with friend props', () => {

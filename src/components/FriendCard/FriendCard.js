@@ -40,7 +40,7 @@ export default class FriendCard extends Component {
       <section className="FriendCard">
         <h2 className="FriendCard__name">{friend.friend_name}</h2>
         <h3 className="FriendCard__occasion-date">
-          {moment(friend.occasion_date).format('MMMM Do YYYY')}
+          {moment.utc(friend.occasion_date).format('MMMM Do YYYY')}
         </h3>
         <h4 className="FriendCard__occasion">{friend.occasion}</h4>
         <ul className="FriendCard__likes">

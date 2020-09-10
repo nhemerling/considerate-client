@@ -12,7 +12,7 @@ exports[`FriendCard Component renders a FriendCard with friend props 1`] = `
   <h3
     className="FriendCard__occasion-date"
   >
-    January 21st 2029
+    January 22nd 2029
   </h3>
   <h4
     className="FriendCard__occasion"
