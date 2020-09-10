@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FriendsPage component renders a FriendsPage component by default 1`] = `
+<section
+  className="FriendsPage"
+>
+  <label
+    htmlFor="search"
+  >
+    <p>
+      Search Friends: 
+    </p>
+  </label>
+  <input
+    name="search"
+    onChange={[Function]}
+    type="text"
+    value=""
+  />
+  <div
+    className="FriendsPage__friends"
+  />
+</section>
+`;

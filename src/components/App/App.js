@@ -25,7 +25,7 @@ export default class App extends Component {
     return (
       <div className="App">
         <header className="App__header">
-          <Header />
+          <Route component={Header} />
         </header>
         <main className="App__main">
           {this.state.hasError && <p className="red">There was an error.</p>}

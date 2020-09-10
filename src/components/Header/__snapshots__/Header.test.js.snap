@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header component renders the Header with no auth token 1`] = `
+<nav
+  className="Header"
+>
+  <h1>
+    <Link
+      to="/"
+    >
+      Considerate
+    </Link>
+  </h1>
+  <div
+    className="Header__not-logged-in"
+  >
+    <NavLink
+      activeClassName="selected"
+      to="/login"
+    >
+      Log in
+    </NavLink>
+    <NavLink
+      activeClassName="selected"
+      to="/register"
+    >
+      Register
+    </NavLink>
+  </div>
+</nav>
+`;

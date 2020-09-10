@@ -1,0 +1,77 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RegistrationForm component renders an RegistrationForm 1`] = `
+<form
+  className="RegistrationForm"
+  onSubmit={[Function]}
+>
+  <div
+    role="alert"
+  />
+  <div
+    className="full_name"
+  >
+    <label
+      htmlFor="RegistrationForm__full_name"
+    >
+      Full name
+    </label>
+    <input
+      id="RegistrationForm__full_name"
+      name="full_name"
+      required={true}
+      type="text"
+    />
+  </div>
+  <div
+    className="user_name"
+  >
+    <label
+      htmlFor="RegistrationForm__user_name"
+    >
+      User name
+    </label>
+    <input
+      id="RegistrationForm__user_name"
+      name="user_name"
+      required={true}
+      type="text"
+    />
+  </div>
+  <div
+    className="password"
+  >
+    <label
+      htmlFor="RegistrationForm__password"
+    >
+      Password
+    </label>
+    <input
+      id="RegistrationForm__password"
+      name="password"
+      required={true}
+      type="password"
+    />
+  </div>
+  <div
+    className="nick_name"
+  >
+    <label
+      htmlFor="RegistrationForm__nick_name"
+    >
+      Nickname
+    </label>
+    <input
+      id="RegistrationForm__nick_name"
+      name="nick_name"
+      required={true}
+      type="text"
+    />
+  </div>
+  <button
+    type="submit"
+  >
+    Register
+  </button>
+</form>
+`;
