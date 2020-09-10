@@ -62,17 +62,17 @@ exports[`AddFriendForm component renders an AddFriendForm 1`] = `
     <div
       className="friend_likes"
     >
+      <label
+        htmlFor="AddFriendForm__likes"
+      >
+        Likes
+      </label>
       <div
         className="friend_like1"
         key="1"
       >
-        <label
-          htmlFor="AddFriendForm__like1"
-        >
-          Like 
-          1
-        </label>
         <input
+          aria-label="Like 1"
           id="AddFriendForm__like1"
           name={1}
           onChange={[Function]}
