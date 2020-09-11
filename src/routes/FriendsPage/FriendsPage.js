@@ -39,6 +39,8 @@ export default class FriendsPage extends Component {
     return comparison;
   }
 
+  // sorts friends in chronological order of occasions then
+  // filters friend_names based on the search terms in state
   renderFilteredFriends() {
     const { friendList = [] } = this.context;
     const sortedFriends = friendList.sort(this.compare);
