@@ -6,7 +6,7 @@ You can be the thoughtful friend you've always meant to be.
 
 ## Link to Live App
 
-https://considerate-client.vercel.app/
+https://considerate-app.vercel.app/
 
 ## Where Components Live
 
