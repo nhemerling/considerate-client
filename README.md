@@ -16,6 +16,26 @@ https://considerate-client.vercel.app/
 - The context for the application is found in `/src/context`
 - The `TOKEN_KEY` and `API_ENDPOINT` are found in `src/config.js`
 
+## Screenshots
+
+Registration Page
+![RegistrationPage](https://user-images.githubusercontent.com/65194792/92969296-86c73b00-f431-11ea-9413-0756629fb068.png)
+
+Login Page
+![LoginPage](https://user-images.githubusercontent.com/65194792/92969275-7ca53c80-f431-11ea-99a5-e19dec69baa7.png)
+
+Home Page
+![HomePage](https://user-images.githubusercontent.com/65194792/92969314-90e93980-f431-11ea-99b9-cbec00e522e9.png)
+
+Friends Page
+![FriendsPage](https://user-images.githubusercontent.com/65194792/92969326-96df1a80-f431-11ea-89db-684da94c5d2f.png)
+
+Add Friend Page
+![AddFriendPage](https://user-images.githubusercontent.com/65194792/92969320-95155700-f431-11ea-9c58-9d48958c4ade.png)
+
+Edit Friend Page
+![EditFriendPage](https://user-images.githubusercontent.com/65194792/92969324-96468400-f431-11ea-8050-996a8756d3cd.png)
+
 ## Setting Up
 
 - Install dependencies: `npm install`
