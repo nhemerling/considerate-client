@@ -16,6 +16,33 @@ exports[`LandingPage component renders a LandingPage component 1`] = `
   >
     <header>
       <h3>
+        Demo Considerate
+      </h3>
+    </header>
+    <p>
+      If you'd like to demo Considerate, log in with:
+    </p>
+    <ul>
+      <li>
+        username: 
+        <b>
+          demo
+        </b>
+      </li>
+      <li>
+        password: 
+        <b>
+          D33mm0!!
+        </b>
+      </li>
+    </ul>
+  </section>
+  <br />
+  <section
+    className="LandingPage__section"
+  >
+    <header>
+      <h3>
         Give the perfect gift, every time.
       </h3>
     </header>
@@ -26,6 +53,7 @@ exports[`LandingPage component renders a LandingPage component 1`] = `
       You can be the thoughtful friend you've always meant to be.
     </p>
   </section>
+  <br />
   <section
     className="LandingPage__section"
   >
@@ -41,6 +69,7 @@ exports[`LandingPage component renders a LandingPage component 1`] = `
       Considerate provides you with an intuitive interface that helps you keep track of all the things your friends have told you they like.
     </p>
   </section>
+  <br />
   <section
     className="LandingPage__section"
   >
@@ -56,17 +85,6 @@ exports[`LandingPage component renders a LandingPage component 1`] = `
       That way you'll never miss another anniversay.
     </p>
   </section>
-  <section
-    className="LandingPage__section"
-  >
-    <header>
-      <h3>
-        Demo Considerate
-      </h3>
-    </header>
-    <p>
-      If you'd like to demo Considerate, log in with the username 'demo' and the password 'D33mm0!!'.
-    </p>
-  </section>
+  <br />
 </div>
 `;

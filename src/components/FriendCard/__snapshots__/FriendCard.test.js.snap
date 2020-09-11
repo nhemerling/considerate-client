@@ -26,6 +26,7 @@ exports[`FriendCard Component renders a FriendCard with friend props 1`] = `
     className="FriendCard__buttons"
   >
     <button
+      className="delete"
       onClick={[Function]}
       type="button"
     >
@@ -35,6 +36,7 @@ exports[`FriendCard Component renders a FriendCard with friend props 1`] = `
       to="/edit-friend/1"
     >
       <button
+        className="edit"
         type="button"
       >
         Edit

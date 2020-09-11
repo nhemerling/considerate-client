@@ -3,5 +3,12 @@
 exports[`HomePage component renders a HomePage component by default 1`] = `
 <section
   className="HomePage"
-/>
+>
+  <h2>
+    Upcoming Occasions
+  </h2>
+  <div
+    className="HomePage__friends"
+  />
+</section>
 `;
