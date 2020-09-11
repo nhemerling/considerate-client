@@ -4,3 +4,31 @@
   margin: 10px 10px 20px;
   margin-left: 0;
 }
+
+.add {
+  color: #fff;
+}
+
+.add:hover {
+  background-color: #ada7f0;
+}
+
+.submit {
+  background-color: #fff;
+  color: #555;
+  border: 1px solid #ada7f0;
+}
+
+.submit:hover {
+  background-color: #ada7f0;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+.reset {
+  color: #fff;
+}
+
+.reset:hover {
+  background-color: #ada7f0;
+}

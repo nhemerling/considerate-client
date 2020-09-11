@@ -1,4 +1,4 @@
-.HomePage {
+.HomePage__friends {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;

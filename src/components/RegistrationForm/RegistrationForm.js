@@ -72,7 +72,9 @@ export default class RegistrationForm extends Component {
             id="RegistrationForm__nick_name"
           ></input>
         </div>
-        <button type="submit">Register</button>
+        <button className="submit" type="submit">
+          Register
+        </button>
       </form>
     );
   }

@@ -42,7 +42,10 @@ export default class HomePage extends Component {
 
   render() {
     return (
-      <section className="HomePage">{this.renderFilteredFriends()}</section>
+      <section className="HomePage">
+        <h2>Upcoming Occasions</h2>
+        <div className="HomePage__friends">{this.renderFilteredFriends()}</div>
+      </section>
     );
   }
 }

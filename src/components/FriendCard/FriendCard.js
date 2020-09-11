@@ -53,11 +53,17 @@ export default class FriendCard extends Component {
           })}
         </ul>
         <div className="FriendCard__buttons">
-          <button type="button" onClick={() => this.deleteFriend(friend.id)}>
+          <button
+            className="delete"
+            type="button"
+            onClick={() => this.deleteFriend(friend.id)}
+          >
             Delete
           </button>
           <Link to={`/edit-friend/${friend.id}`}>
-            <button type="button">Edit</button>
+            <button className="edit" type="button">
+              Edit
+            </button>
           </Link>
         </div>
       </section>

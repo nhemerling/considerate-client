@@ -125,14 +125,24 @@ export default class AddFriendForm extends Component {
             {this.state.likes.map((like) => {
               return this.renderLikeField(like.id);
             })}
-            <button type="button" onClick={() => this.handleAddLikeField()}>
+            <button
+              className="add"
+              type="button"
+              onClick={() => this.handleAddLikeField()}
+            >
               + Add Like
             </button>
           </div>
-          <button type="reset" onClick={() => this.handleReset()}>
+          <button
+            className="reset"
+            type="reset"
+            onClick={() => this.handleReset()}
+          >
             Reset
           </button>
-          <button type="submit">Submit</button>
+          <button className="submit" type="submit">
+            Submit
+          </button>
         </form>
       </section>
     );

@@ -8,6 +8,24 @@ export default class LandingPage extends Component {
         <section className="LandingPage__section">
           <h1>How did you remember?!</h1>
         </section>
+
+        <section className="LandingPage__section">
+          <header>
+            <h3>Demo Considerate</h3>
+          </header>
+          <p>If you'd like to demo Considerate, log in with:</p>
+          <ul>
+            <li>
+              username: <b>demo</b>
+            </li>
+            <li>
+              password: <b>D33mm0!!</b>
+            </li>
+          </ul>
+        </section>
+
+        <br />
+
         <section className="LandingPage__section">
           <header>
             <h3>Give the perfect gift, every time.</h3>
@@ -18,6 +36,8 @@ export default class LandingPage extends Component {
           </p>
           <p>You can be the thoughtful friend you've always meant to be.</p>
         </section>
+
+        <br />
 
         <section className="LandingPage__section">
           <header>
@@ -33,6 +53,8 @@ export default class LandingPage extends Component {
           </p>
         </section>
 
+        <br />
+
         <section className="LandingPage__section">
           <header>
             <h3>We'll remind you.</h3>
@@ -44,15 +66,7 @@ export default class LandingPage extends Component {
           <p>That way you'll never miss another anniversay.</p>
         </section>
 
-        <section className="LandingPage__section">
-          <header>
-            <h3>Demo Considerate</h3>
-          </header>
-          <p>
-            If you'd like to demo Considerate, log in with the username 'demo'
-            and the password 'D33mm0!!'.
-          </p>
-        </section>
+        <br />
       </div>
     );
   }

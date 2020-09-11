@@ -3,6 +3,12 @@
   text-align: center;
 }
 
+ul {
+  list-style-type: none;
+  margin: 0 10px;
+  padding: 0;
+}
+
 @media screen and (min-width: 450px) {
   .LandingPage__section h1 {
     font-size: 50px;
