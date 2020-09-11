@@ -1,4 +1,5 @@
 @import url('https://use.typekit.net/rmn3inm.css');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
 
 * {
   box-sizing: border-box;
@@ -11,6 +12,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #d7ffab;
+  border: 25px solid #d7ffab;
+  font-family: 'Fira Sans', sans-serif;
 }
 
 h1 {
@@ -37,7 +41,7 @@ p {
 }
 
 .red {
-  color: #ca1551;
+  color: #e38ca5;
 }
 
 input {
@@ -59,6 +63,10 @@ button {
   border-radius: 4px;
   padding: 8px 12px;
   margin: 8px;
+}
+
+button:hover {
+  cursor: pointer;
 }
 
 section {

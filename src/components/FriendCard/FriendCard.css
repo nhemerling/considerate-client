@@ -2,7 +2,7 @@
   background: none;
   display: flex;
   flex-direction: column;
-  border: 1px solid #ada7f0;
+  border: 5px solid #ada7f0;
   margin-bottom: 40px;
   margin-right: 20px;
   border-radius: 4px;
@@ -14,4 +14,28 @@
   list-style-type: none;
   margin: 0;
   padding: 0;
+}
+
+.delete {
+  background-color: #ffffff;
+  color: #555;
+  border: 1px solid #e38ca5;
+}
+
+.delete:hover {
+  background-color: #e38ca5;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+}
+
+.edit {
+  background-color: #ffffff;
+  color: #555;
+  border: 1px solid #d7ffab;
+}
+
+.edit:hover {
+  background-color: #c4ff85;
+  color: #ffffff;
+  border: 1px solid #ffffff;
 }

@@ -69,6 +69,7 @@ exports[`RegistrationForm component renders an RegistrationForm 1`] = `
     />
   </div>
   <button
+    className="submit"
     type="submit"
   >
     Register

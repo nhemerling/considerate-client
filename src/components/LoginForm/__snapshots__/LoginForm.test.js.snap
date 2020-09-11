@@ -38,6 +38,7 @@ exports[`LoginForm component renders an LoginForm 1`] = `
     />
   </div>
   <button
+    className="submit"
     type="submit"
   >
     Login

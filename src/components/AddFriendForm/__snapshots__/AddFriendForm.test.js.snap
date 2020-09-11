@@ -81,6 +81,7 @@ exports[`AddFriendForm component renders an AddFriendForm 1`] = `
         />
       </div>
       <button
+        className="add"
         onClick={[Function]}
         type="button"
       >
@@ -88,12 +89,14 @@ exports[`AddFriendForm component renders an AddFriendForm 1`] = `
       </button>
     </div>
     <button
+      className="reset"
       onClick={[Function]}
       type="reset"
     >
       Reset
     </button>
     <button
+      className="submit"
       type="submit"
     >
       Submit

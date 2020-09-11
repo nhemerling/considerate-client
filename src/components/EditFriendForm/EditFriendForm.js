@@ -90,7 +90,9 @@ export default class EditFriendForm extends Component {
               onChange={(e) => this.handleChange(e.target)}
             ></input>
           </div>
-          <button type="submit">Submit</button>
+          <button className="submit" type="submit">
+            Submit
+          </button>
         </form>
       </section>
     );

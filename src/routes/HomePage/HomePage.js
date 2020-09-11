@@ -27,6 +27,8 @@ export default class HomePage extends Component {
     return comparison;
   }
 
+  // sorts friends in chronological order of occasions then
+  // filters friends to not show past and only show occasions in the next month
   renderFilteredFriends() {
     const { friendList = [] } = this.context;
     const sortedFriends = friendList.sort(this.compare);
@@ -42,7 +44,10 @@ export default class HomePage extends Component {
 
   render() {
     return (
-      <section className="HomePage">{this.renderFilteredFriends()}</section>
+      <section className="HomePage">
+        <h2>Upcoming Occasions</h2>
+        <div className="HomePage__friends">{this.renderFilteredFriends()}</div>
+      </section>
     );
   }
 }
